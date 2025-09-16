@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../assets/Rajat.jpg";
+import image from "../assets/rajat (3).png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
@@ -59,7 +59,7 @@ const Hero = () => {
     </h1>
 
     {/* Desktop Navigation (Right) */}
-    <nav className="hidden md:flex gap-6 text-base font-medium">
+    <nav className="hidden fixed right-12 md:flex gap-6 text-base font-medium">
       {links.map((item) => (
         <a
           key={item.name}

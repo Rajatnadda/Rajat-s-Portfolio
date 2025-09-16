@@ -6,7 +6,7 @@ const Projects = React.lazy(() => import('./Pages/Projects'));
 const Contactus = React.lazy(() => import('./Pages/Contactus'));
 const Footer = React.lazy(() => import('./Pages/Footer'));
  
-const Home = () => {
+const Home = ({ scrollContainerRef }) => {
   return (
     <>
       <section id="hero"><Hero /></section>
@@ -14,7 +14,7 @@ const Home = () => {
         <section id="about"><About /></section>
         <section id="projects"><Projects /></section>
         <section id="contactus"><Contactus /></section>
-        <Footer />
+        <Footer scrollContainerRef={scrollContainerRef} />
       </Suspense>
     </>
   )

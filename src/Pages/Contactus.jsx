@@ -219,7 +219,7 @@ const Contactus = () => {
             )}
             <button
               type="submit"
-              className="w-full py-3 px-6 rounded-full text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:scale-105 hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
+              className="w-full cursor-pointer hover:animate-bounce py-3 px-6 rounded-full text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:scale-105 hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "🚀 Submit"}
