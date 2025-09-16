@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
@@ -9,9 +9,13 @@ import { BsTwitterX } from "react-icons/bs";
 
 const Contactus = () => {
   const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatusMessage("");
 
     emailjs
       .sendForm(
@@ -23,12 +27,16 @@ const Contactus = () => {
       .then(
         (result) => {
           console.log("Message Sent:", result.text);
-          alert("✅ Message sent successfully!");
+          setStatusMessage("✅ Message sent successfully!");
           form.current.reset();
+          setIsSubmitting(false);
+          setTimeout(() => setStatusMessage(""), 5000); // Hide after 5 seconds
         },
         (error) => {
           console.error("Error:", error.text);
-          alert("❌ Failed to send message. Please try again.");
+          setStatusMessage("❌ Failed to send message. Please try again.");
+          setIsSubmitting(false);
+          setTimeout(() => setStatusMessage(""), 5000); // Hide after 5 seconds
         }
       );
   };
@@ -198,11 +206,23 @@ const Contactus = () => {
               required
               className="w-full p-3 rounded-lg bg-gray-800/70 border border-gray-700 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 outline-none resize-none transition-all duration-300"
             ></textarea>
+            {statusMessage && (
+              <p
+                className={`text-center text-sm font-medium ${
+                  statusMessage.includes("Failed")
+                    ? "text-red-400"
+                    : "text-green-400"
+                }`}
+              >
+                {statusMessage}
+              </p>
+            )}
             <button
               type="submit"
-              className="w-full py-3 px-6 rounded-full text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:scale-105 hover:shadow-xl transition-all duration-300"
+              className="w-full py-3 px-6 rounded-full text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:scale-105 hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100"
+              disabled={isSubmitting}
             >
-              🚀 Submit
+              {isSubmitting ? "Sending..." : "🚀 Submit"}
             </button>
           </form>
         </motion.div>
