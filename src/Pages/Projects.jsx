@@ -89,7 +89,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="bg-gradient-to-b from-violet-900 via-black to-black py-20 px-4 sm:px-8 text-white overflow-hidden">
+    <section id="projects" className="bg-gradient-to-b from-violet-900 via-black to-black py-20 px-4 sm:px-8 text-white">
       <h2 className="text-3xl sm:text-5xl font-extrabold mb-16 text-center tracking-wide uppercase bg-gradient-to-r from-yellow-400 to-cyan-400 text-transparent bg-clip-text">
         My Projects
       </h2>

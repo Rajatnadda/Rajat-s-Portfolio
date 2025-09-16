@@ -8,7 +8,7 @@ const Footer = React.lazy(() => import('./Pages/Footer'));
  
 const Home = () => {
   return (
-    <div>
+    <>
       <section id="hero"><Hero /></section>
       <Suspense fallback={<div>Loading...</div>}>
         <section id="about"><About /></section>
@@ -16,7 +16,7 @@ const Home = () => {
         <section id="contactus"><Contactus /></section>
         <Footer />
       </Suspense>
-    </div>
+    </>
   )
 }
 

@@ -7,20 +7,32 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500); // 2.5 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setLoading(false), 2500);
+    document.body.style.overflow = loading ? "hidden" : "auto";
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = "auto";
+    };
+  }, [loading]);
 
   return (
     <AnimatePresence mode="wait">
       {loading ? (
-        <LoadingScreen key="loader" />
+        <motion.div
+          key="loader"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        >
+          <LoadingScreen />
+        </motion.div>
       ) : (
-        <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div
+          key="home"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <Home />
         </motion.div>
       )}

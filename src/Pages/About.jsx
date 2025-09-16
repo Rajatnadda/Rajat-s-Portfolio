@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     <motion.section
-      className="bg-gradient-to-b from-purple-900 via-black to-violet-900 text-white py-20 px-6 sm:px-12 lg:px-20 overflow-hidden"
+      className="bg-gradient-to-b from-purple-900 via-black to-violet-900 text-white py-20 px-6 sm:px-12 lg:px-20"
       id="about"
       variants={sectionVariants}
       initial="hidden"
