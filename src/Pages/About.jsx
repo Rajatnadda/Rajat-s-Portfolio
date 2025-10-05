@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { MdWork } from "react-icons/md";
-import Resume from "../assets/Rajat's.Resume.pdf"; 
-
+import {Resume} from "../assets/Rajat's Resume.pdf";
 const About = () => {
   const sectionVariants = {
     hidden: { opacity: 0 },
