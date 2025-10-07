@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../assets/rajat (3).png";
+import image from "../assets/Rajat.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
