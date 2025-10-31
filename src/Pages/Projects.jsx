@@ -6,7 +6,8 @@ import image1 from "../assets/11.png";
 import image2 from "../assets/22.png";
 import image3 from "../assets/55.png";
 import image7 from "../assets/77.png";
-import image8 from "../assets/88.png"
+import image8 from "../assets/88.png";
+import image9 from "../assets/99.png";
 
 const carouselItems = [
   {
@@ -43,6 +44,13 @@ const carouselItems = [
     subtitle: "TO Do App (React + Tailwind)",
     image: image8,
     liveUrl: "https://to-do-app-mu-peach.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "Assignement Project(Assignments Assign to Students)",
+    subtitle: "Assignments To Students (React + Tailwind)",
+    image: image9,
+    liveUrl: "https://joineazy-assignment.vercel.app/",
   },
 ];
 
