@@ -8,6 +8,7 @@ import image3 from "../assets/55.png";
 import image7 from "../assets/77.png";
 import image8 from "../assets/88.png";
 import image9 from "../assets/99.png";
+import image10 from "../assets/Assignment.png";
 
 const carouselItems = [
   {
@@ -18,35 +19,42 @@ const carouselItems = [
     liveUrl: "http://ivan-stark-portfolio.vercel.app",
   },
   {
-    id: 2,
+   id:2,
+    title: "Portfolio Assignment Project",
+    subtitle: "Next.js + Tailwind",
+    image: image10,
+    liveUrl: "https://grow-therapy-assignment-ivory.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Micgram",
     subtitle: "Social Media App (React)",
     image: image2,
     liveUrl: "https://micgram.netlify.app",
   },
   {
-    id: 3,
+    id: 4,
     title: "Job Links Project",
     subtitle: "Full Stack MERN",
     image: image3,
     liveUrl: "https://job-links.onrender.com",
   },
   {
-    id: 7,
+    id: 5,
     title: "Spotify Home Page",
     subtitle: "Clone UI (React + Tailwind)",
     image: image7,
     liveUrl: "https://home-page-clone-spotify.netlify.app/",
   },
    {
-    id: 8,
+    id: 6,
     title: "To Do App",
     subtitle: "TO Do App (React + Tailwind)",
     image: image8,
     liveUrl: "https://to-do-app-mu-peach.vercel.app/",
   },
   {
-    id: 9,
+    id: 7,
     title: "Assignement Project(Assignments Assign to Students)",
     subtitle: "Assignments To Students (React + Tailwind)",
     image: image9,
