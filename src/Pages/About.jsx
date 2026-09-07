@@ -135,7 +135,7 @@ const About = () => {
               Intern at Callsmaster Services LLP
             </h4>
             <p className="text-gray-300 text-sm font-medium">
-              From <span className="text-yellow-300">March 2025</span> – Present
+              From <span className="text-yellow-300">March 2025</span> – September 2025
             </p>
             <p className="text-gray-400 text-sm leading-relaxed">
               <span className="font-semibold text-white">Address:</span> A-54,
